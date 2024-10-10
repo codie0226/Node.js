@@ -32,9 +32,9 @@ POST /shops/reviews/upload
 ### Request Body
 ```
 {
-    "userName" : {userName}
-    "content" : {content}
-    "rating" : {rating}
+    "userName" : {userName},
+    "content" : {content},
+    "rating" : {rating},
     "shopId" : {shopId}
 }
 ```
@@ -73,24 +73,44 @@ Authorization : accessToken (user)
 # 미션 성공 누르기
 
 ### API EndPoint
+PATH /home/users/missions/success
 
 ### Request Body
+{
+    is_complete = true
+}
 
 ### Request Header
+Authorization : accessToken (user)
 
 ### Query String
+?userId=1234&missions_id=1234  //1안
 
 ### Path Variable
+/{user_missions_id}   //2안
 
 
 # 회원가입 하기
 
 ### API EndPoint
+POST /home/users/signup
 
 ### Request Body
+{
+    "username" : "codie",
+    "password" : "1234",
+    "gender" : 1,
+    "birthdate" : 2002-02-26,
+    "address" : "Incheon",
+    "preferred_food" : ["Korean", "FastFood"],
+    "term_agreement" : true
+}
 
 ### Request Header
+필요없음
 
 ### Query String
+필요없음
 
-### Path Variable
+### Path variable
+필요없음
